@@ -30,3 +30,21 @@ Stok  : 10
 
 update
 di program dapat mengubah data dari model kit yang sudah ada
+contoh update
+Data lama:
+Nama  : Gundam RX-78
+Merek : Bandai
+Harga : Rp 350000
+Stok  : 10
+
+Data baru:
+Nama  : Gundam RX-78 Ver 2.0
+Merek : Bandai
+Harga : 375000
+Stok  : 12
+
+hapus
+di program ini bisa hapus data dari list
+contoh hapus
+Index ke : 1
+Berhasil dihapus
