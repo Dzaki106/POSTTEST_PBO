@@ -28,3 +28,5 @@ Merek : eddas
 Harga : 450000
 Stok  : 10
 
+update
+di program dapat mengubah data dari model kit yang sudah ada
