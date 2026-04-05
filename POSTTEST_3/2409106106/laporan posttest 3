@@ -1,0 +1,21 @@
+POSTTEST_PBO
+Pendahuluan
+
+projek ini adalah kode java buat toko model kit dan memiliki inheritance(tipe inheritance Hierarchical Inheritance)
+
+isi
+Hierarchical Inheritance terjadi ketika satu parent class memiliki dua atau lebih child class.
+Dalam program ini:
+Parent Class: ModelKit
+Child Class 1: GradeKit
+Child Class 2: PremiumKit
+
+parent Class: ModelKit
+Memiliki atribut: nama, merek, harga, stok
+Memiliki method: tampil()
+Class Anak 1: GradeKit
+Mewarisi semua atribut dan method dari ModelKit
+Memiliki tambahan atribut: skala (min 1/144 - max 1/60)
+Class Anak 2: PremiumKit
+Mewarisi semua atribut dan method dari ModelKit
+Memiliki tambahan atribut: tipe (Reguler atau Premium)
