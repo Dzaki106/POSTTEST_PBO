@@ -1,0 +1,47 @@
+POSTTEST_PBO
+Pendahuluan
+Projek ini adalah kode Java untuk toko model kit yang memiliki konsep Polymorphism.
+
+JENIS POLYMORPHISM DALAM PROGRAM
+1. OVERRIDE (Method Overriding)
+Override terjadi ketika child class mengimplementasikan ulang method yang sudah ada di parent class.
+Parent Class: ModelKit
+Memiliki method tampil() yang menampilkan data dasar:
+-ID
+-Nama
+-Merek
+-Harga
+-Stok
+-Kategori
+Class Anak 1: GradeKit
+Melakukan override terhadap method tampil() dari ModelKit. Method tampil() di GradeKit akan menampilkan data dasar dari ModelKit ditambah dengan:
+-Skala (1/144, 1/100, 1/72, 1/60)
+-Bonus Point
+
+Class Anak 2: PremiumKit
+Melakukan override terhadap method tampil() dari ModelKit. Method tampil() di PremiumKit akan menampilkan data dasar dari ModelKit ditambah dengan:
+-Tipe (Reguler atau Premium)
+-Edisi Terbatas
+Contoh Override di GradeKit:
+Method tampil() yang dipanggil akan menampilkan skala dan bonusPoint. Ini berbeda dengan method tampil() di ModelKit yang hanya menampilkan data dasar.
+Contoh Override di PremiumKit:
+Method tampil() yang dipanggil akan menampilkan tipe, edisi terbatas, dan sertifikat. Ini juga berbeda dengan method tampil() di ModelKit.
+
+2. POLYMORPHIC ARRAY
+Program ini menggunakan ArrayList dengan tipe parent class (ModelKit) untuk menyimpan objek dari berbagai child class.
+Penjelasan:
+ArrayList bertipe ModelKit bisa menyimpan tiga jenis objek:
+-Objek ModelKit (Reguler)
+-Objek GradeKit (Child Class 1)
+-Objek PremiumKit (Child Class 2)
+Ini adalah bentuk polymorphism karena satu tipe data (ModelKit) bisa merepresentasikan banyak bentuk (ModelKit, GradeKit, PremiumKit).
+Contoh dalam program:
+ArrayList dapat menyimpan objek ModelKit biasa, objek GradeKit, dan objek PremiumKit secara bersamaan. Ketika method tampil() dipanggil, perilakunya akan berbeda sesuai dengan jenis objeknya.
+
+3. INSTANCEOF
+Program menggunakan instanceof untuk mengecek tipe objek sebelum melakukan operasi khusus.
+Penjelasan:
+instanceof digunakan untuk mengetahui apakah suatu objek adalah instance dari class tertentu. Ini memungkinkan program menangani objek yang berbeda secara berbeda meskipun disimpan dalam satu ArrayList.
+Penggunaan dalam program:
+-Jika objek adalah GradeKit, maka program akan mengupdate atribut skala
+-Jika objek adalah PremiumKit, maka program akan mengupdate atribut tipe dan edisi terbatas
