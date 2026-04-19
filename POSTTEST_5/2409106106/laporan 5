@@ -1,0 +1,52 @@
+POSTTEST PBO
+
+ABSTRACT CLASS
+Apa itu Abstract Class?
+Abstract class adalah class yang tidak bisa dibuat objeknya langsung. Hanya bisa diturunkan ke class anak.
+
+Implementasi di Program
+ModelKit dijadikan Abstract Class
+ModelKit tidak bisa dibuat objeknya. Yang bisa dibuat objek hanya GradeKit dan PremiumKit.
+Abstract Method (3 method):
+-infoPromo() - menampilkan promo
+-getLevel() - menampilkan level produk
+-hitungBonus() - menghitung bonus poin
+
+GradeKit mengimplementasi abstract method:
+-infoPromo() → menampilkan bonus point
+-getLevel() → mengembalikan Entry Grade / High Grade / Master Grade
+-hitungBonus() → menghitung bonus point
+
+PremiumKit mengimplementasi abstract method:
+-infoPromo() → menampilkan garansi premium
+-getLevel() → mengembalikan Premium Edition
+-hitungBonus() → menghitung bonus dari harga
+
+INTERFACE
+Apa itu Interface?
+Interface adalah kumpulan method kosong yang harus diisi oleh class yang menggunakannya.
+
+Interface Discountable (3 method):
+-applyDiscount(int persen) - memberi diskon
+-getDiscountInfo() - info diskon
+-isOnSale() - cek status sale
+
+GradeKit implements Discountable:
+-applyDiscount() → diskon maksimal 50%
+-getDiscountInfo() → mengembalikan status diskon
+-isOnSale() → mengembalikan true/false
+
+PremiumKit implements Discountable:
+-applyDiscount() → diskon maksimal 30%
+-getDiscountInfo() → mengembalikan status diskon
+-isOnSale() → mengembalikan true/false
+
+POLYMORPHISM
+Override
+GradeKit dan PremiumKit mengoverride method tampil() dari ModelKit.
+
+Polymorphic Array
+ArrayList<ModelKit> bisa menyimpan objek GradeKit dan PremiumKit.
+
+Instanceof
+Digunakan untuk mengecek tipe objek saat update data.
